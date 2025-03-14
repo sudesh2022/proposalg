@@ -27,7 +27,7 @@
 
         {% if issues %}
         <div class="mt-5">
-            <h3>Suggestions for Improvement in the Proposal:</h3>
+            <h3>Identified Issues:</h3>
             <ul class="list-group">
                 {% for issue in issues %}
                 <li class="list-group-item">
@@ -41,14 +41,25 @@
         </div>
         {% endif %}
 
-        {% if improvements %}
+        {% if improvements  %}
         <div class="mt-5">
-            <h3>Suggested Improvements:</h3>
-            <pre>{{ improvements }}</pre>
+            <h3>Improved Proposal:</h3>
+            <div class="preformatted">{{ improvements }}</div>
         </div>
         {% endif %}
+       
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        .preformatted {
+            white-space: pre-wrap;
+            background-color: #f8f9fa;
+            padding: 10px;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+        }
+    </style>
 </body>
 </html>
